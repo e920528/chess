@@ -9,10 +9,23 @@ class Board extends Component {
 */
     renderSquare(i, j) {
         let background;
-        if((i + j) % 2 > 0)
-            background = "light";
-        else
-            background = "dark";
+        switch(this.props.status[i][j]){
+            case 0:
+                if((i + j) % 2 > 0)
+                    background = "light";
+                else
+                    background = "dark";
+                break;
+            case 1:
+                background = "green";
+                break;
+            case 2:
+                background = "blue";
+                break;
+            default:
+                background = "red";
+        }
+            
         return (
             <Square background = {background} value = {this.props.squares[i][j]} onClick = {() => this.props.onClick(i, j)}/>
         );

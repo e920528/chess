@@ -11,11 +11,20 @@
     text-align: center;
     width: 50px;
 }
+.blue {
+    background: rgb(155,194,230);
+}
 .dark {
     background: #B58763;
 }
+.green {
+    background: rgb(198,239,206);
+}
 .light {
     background: #F0DAB5;
+}
+.red {
+    background: rgb(255,199,206);
 }
 .white {
     color: #fff;    
